@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Login</title>
+    <link rel="stylesheet" type="text/css" href="estilos.css">
+  </head>
+
+  <body>
+    <div class="loginbox">
+       <img src="img/loginRojo.jpg" class="avatar">
+    <h1> EnerGym </h1>
+        <form >
+          <p>Usuario</p>
+          <input type="text" id="nombre_usuario" name="" placeholder="Ingrese Usuario">
+          <p>Contraseña</p>
+          <input type="password" id="password_user" name="" placeholder="Ingrese Contraseña">
+
+          <input class="boton" id="iniciar_sesion" style="text-align:center;" name="" value="Ingresar">
+
+          <!--
+          <a href="clientes.html"><input class="boton" style="text-align:center;" name="" value="Acceder como secretaria"></a>
+          <a href="administracion/eventos.html"><input class="boton" style="text-align:center;" name="" value="Acceder como administración"></a>
+          <a href="directores/empleados.html"><input class="boton" style="text-align:center;" name="" value="Acceder como dirección"></a>
+        -->
+        </form>
+    </div>
+  </body>
+  <script type="text/javascript">
+    document.getElementById("iniciar_sesion").onclick = function() {
+      usuario = document.getElementById("nombre_usuario").value;
+      password = document.getElementById("password_user").value;
+
+      if(usuario='' && password==''){
+        alert('Ingrese usuario y Contraseña');
+      } else if(usuario='secretaria' && password=='secretaria'){
+        window.location.href = "inicio.html";
+      }else if (usuario='admin' && password=='admin') {
+        window.location.href = "administracion/eventos.html";
+      } else if (usuario='direccion' && password=='direccion') {
+        window.location.href = "directores/empleados.html";
+      } else {
+        alert('Usuario o Contraseña invalidos.')
+      }
+    }
+  </script>
+</html>

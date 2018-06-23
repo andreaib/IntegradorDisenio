@@ -1,0 +1,88 @@
+/*estilo del encabezado*/
+.topnav {
+ overflow: hidden;
+ background-color: #eee;
+}
+/* Style the links inside the navigation bar */
+.topnav a {
+font-weight: bold;
+ font-style: oblique;
+ float: left;
+ display: block;
+ text-align: center;
+ padding: 14px 16px;
+ text-decoration: none;
+ font-size:20px;
+}
+
+/* estilos del  menu vertical*/
+.menu {
+  padding-top: 0px;
+  background-color:#eee;
+  width: 200px;
+  height:625px;
+}
+.menu a {
+  background-color: #eee; /* Grey background color */
+  color: black; /* Black text color */
+  display: block; /* Make the links appear below each other */
+  padding: 12px; /* Add some padding */
+  text-decoration: none; /* Remove underline from links */
+}
+.menu a:hover {
+  background-color: #ccc; /* Dark grey background on mouse-over */
+}
+.menu a.activo {
+  background-color:#bf0000; /* Add a green color to the "active/current" link */
+  color: white;
+}
+
+/*etilos de la imagen perfil usuario*/
+.container {
+  position: relative;
+   width: 100%;
+  max-width: 400px;
+}
+
+/* Make the image to responsive */
+.image {
+  border-radius: 150px;
+  width: 100%;
+  height: auto;
+}
+/* The overlay effect (full height and width) - lays on top of the container and over the image */
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .3s ease;
+  background-color:#bf0000;
+
+}
+/* When you mouse over the container, fade in the overlay icon*/
+.container:hover .overlay {
+  opacity: 1;
+  border-radius: 165px;
+}
+
+/* The icon inside the overlay is positioned in the middle vertically and horizontally */
+.icon {
+
+  color: white;
+  font-size: 100px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+/* When you move the mouse over the icon, change color */
+.fa-user:hover {
+  color: #eee;
+}
