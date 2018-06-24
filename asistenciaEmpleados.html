@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Clientes</title>
+    <title>Asistencias</title>
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom styles for this template -->
@@ -33,7 +33,10 @@
                     
                     <li><a href="inicio.html">Inicio</a></li>
                     <li><a href="clientes.html">Clientes</a></li>
+		           <li><a href="empleados.html">Empleados</a></li>
                     <li><a href="asistencias.html">Asistencias</a></li>
+        		    <li><a href="asistencias.html">Ent/sal Empleados</a></li>
+         		    <li><a href="eventos.html">Eventos</a></li>
                     <li><a href="">Clases</a></li>
             </ul>
         </div>
@@ -56,72 +59,95 @@
               <div class="">
               <div class="container" style="padding-top:20px;" style="display: flex;">
         <!--contenido-->
-            <!--formulario-->
+        
         <form class="form-inline d-flex justify-content-between">
             <span>
                 <input type="text" class="form-control mb-2 mr-sm-2" id="inlineFormInputName2" placeholder="...">
                 <button type="submit" class="btn btn-dark mb-2">Buscar</button>
             </span>
-            <a href="nuevoCliente.html"><button type="button" class="btn btn-success mb-2">Nuevo Cliente</button></a>
+            <a href="nuevoAsistenciaEmpleado.html"><button type="button" class="btn btn-success mb-2">Nueva Ent/Sal</button></a>
         </form>
         <table class="table bg-light">
             <thead class="thead-dark">
                 <tr>
-                
-                <th scope="col">NºLegajo</th>
-                <th scope="col">Apellido</th>
+                <th scope="col">#</th>
                 <th scope="col">Nombre</th>
-                <th scope="col">DNI</th>
+                <th scope="col">Apellido</th>
+                <th scope="col">Fecha y Hora</th>
+                <th scope="col">Entrada/Salida</th>
                 <th scope="col">Acciones</th>
                 </tr>
             </thead>
             <tbody>
+                    <tr>
+                            <th scope="row">6</th>
+                            <td>Roberto</td>
+                            <td>Melchor</td>
+                            <td>07/06/18 10:30</td>
+                            <td>Salida</td>
+                            <td>
+                                <a href="empleado.html"><button type="button" class="btn btn-secondary">Ir a Empleado</button></a>
+                                <a href="eliminarAsistenciaEmpleado.html"><button type="button" class="btn btn-danger">Eliminar</button></a>
+                            </td>
+                            </tr>
+                            <tr>
+                            <th scope="row">5</th>
+                            <td>Juana</td>
+                            <td>Dearco</td>
+                            <td>07/06/18 11:30</td>
+                            <td>Salida</td>
+                            <td>
+                                    <a href="empleado.html"><button type="button" class="btn btn-secondary">Ir a Empleado</button></a>
+                                    <a href="eliminarAsistenciaEmpleado.html"><button type="button" class="btn btn-danger">Eliminar</button></a>
+                            </td>
+                            </tr>
+                            <tr>
+                            <th scope="row">4</th>
+                            <td>Laura</td>
+                            <td>Pajara</td>
+                            <td>07/06/18 11:32</td>
+                            <td>Salida</td>
+                            <td>
+                                    <a href="empleado.html"><button type="button" class="btn btn-secondary">Ir a Empleado</button></a>
+                                    <a href="eliminarAsistenciaEmpleado.html"><button type="button" class="btn btn-danger">Eliminar</button></a>
+                            </td>
+                            </tr>
                 <tr>
-                <th scope="row">1</th>
-                <td>Perez</td>
-                <td>Juan Gabriel</td>
-                <td>36548222</td>
+                <th scope="row">3</th>
+                <td>Roberto</td>
+                <td>Melchor</td>
+                <td>07/06/18 10:30</td>
+                <td>Entrada</td>
                 <td>
-                    <a href="cliente.html"><button type="button" class="btn btn-secondary">Ver</button></a>
-                    <a href="cuotasCliente.html"><button type="button" class="btn btn-success">Cuotas</button></a>
-                    <a href="eliminarCliente.html"><button type="button" class="btn btn-danger">Eliminar</button></a>
-                    <button type="button" class="btn btn-primary">Clases</button>
-                    <a href="asistenciasCliente.html"><button type="button" class="btn btn-warning">Asistencias</button></a>
-                    <button type="button" class="btn btn-info">Rutinas</button>
+                    <a href="empleado.html"><button type="button" class="btn btn-secondary">Ir a Empleado</button></a>
+                    <a href="eliminarAsistenciaEmpleado.html"><button type="button" class="btn btn-danger">Eliminar</button></a>
                 </td>
                 </tr>
                 <tr>
                 <th scope="row">2</th>
-                <td>Lopez</td>
-                <td>Mariela Andrea</td>
-                <td>35828672</td>
-                
+                <td>Juana</td>
+                <td>Dearco</td>
+                <td>07/06/18 11:30</td>
+                <td>Entrada</td>
                 <td>
-                    <a href="clienteV.html"><button type="button" class="btn btn-secondary">Ver</button></a>
-                    <a href="cuotaVencida.html"><button type="button" class="btn btn-success">Cuotas</button></a>
-                    <a href="eliminarClienteV.html"><button type="button" class="btn btn-danger">Eliminar</button></a>
-                    <button type="button" class="btn btn-primary">Clases</button>
-                    <a href="asistenciasClienteV.html"><button type="button" class="btn btn-warning">Asistencias</button></a>
-                    <button type="button" class="btn btn-info">Rutinas</button>
+                        <a href="empleado.html"><button type="button" class="btn btn-secondary">Ir a Empleado</button></a>
+                        <a href="eliminarAsistenciaEmpleado.html"><button type="button" class="btn btn-danger">Eliminar</button></a>
                 </td>
                 </tr>
                 <tr>
-                <th scope="row">3</th>
-                <td>Fort</td>
-                <td>Carolina Andrea</td>
-                <td>35828672</td>
+                <th scope="row">1</th>
+                <td>Laura</td>
+                <td>Pajara</td>
+                <td>07/06/18 11:32</td>
+                <td>Entrada</td>
                 <td>
-                    <a href="cliente.html"><button type="button" class="btn btn-secondary">Ver</button></a>
-                    <a href="cuotasCliente.html"><button type="button" class="btn btn-success">Cuotas</button></a>
-                    <a href="eliminarCliente.html"><button type="button" class="btn btn-danger">Eliminar</button></a>
-                    <button type="button" class="btn btn-primary">Clases</button>
-                    <a href="asistenciasCliente.html"><button type="button" class="btn btn-warning">Asistencias</button></a>
-                    <button type="button" class="btn btn-info">Rutinas</button>
+                        <a href="empleado.html"><button type="button" class="btn btn-secondary">Ir a Empleado</button></a>
+                        <a href="eliminarAsistenciaEmpleado.html"><button type="button" class="btn btn-danger">Eliminar</button></a>
                 </td>
                 </tr>
             </tbody>
         </table>
-
+        
            <ul class="pagination">
     <li class="page-item">
       <a class="page-link" href="#" aria-label="Previous">
@@ -143,12 +169,15 @@
 
     </div>
 </div>
-                <a href="#menu-toggle" class="btn btn-secondary" id="menu-toggle">Menu</a>
+                <a href="#menu-toggle" class="btn btn-secondary" id="menu-toggle">Menú</a>
                 </div>
             </div>
             <!-- /#page-content-wrapper -->
-
     </div>
+
+  <!-- Copyright -->
+
+</footer>
     <!-- /#wrapper -->
 
     <!-- Bootstrap core JavaScript -->
@@ -163,6 +192,8 @@
     });
     </script>
 
+
+    
 </body>
 
 </html>

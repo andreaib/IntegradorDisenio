@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Asistencias</title>
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="css/simple-sidebar.css" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+
+</head>
+
+<body>
+
+    <div id="wrapper">   
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+
+            <ul class="sidebar-nav">
+
+                <div style="padding-top: 20px; padding-left: 20px;" >
+                <img src="img/dire.png" alt="Avatar" class="image" style="border-radius: 176px 176px 176px 176px;">
+                <p style="padding-left: 35px; font-style: italic; font-weight: bold; color:#fff;" 
+                >
+                Nombre usuario</p>
+                </div>
+                
+                <li class="sidebar-brand">
+                    
+                    <li><a href="inicio.html">Inicio</a></li>
+                    <li><a href="clientes.html">Clientes</a></li>
+		     <li><a href="empleados.html">Empleados</a></li>
+                    <li><a href="asistencias.html">Asistencias</a></li>
+		    <li><a href="asistencias.html">Ent/sal Empleados</a></li>
+ 		    <li><a href="eventos.html">Eventos</a></li>
+                    <li><a href="">Clases</a></li>
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+              <div class="page-header">
+              
+                <h1>Sistema EnerGym 
+                    <a href="../index.html" style="margin-left: 1080px;">
+                        <i class="fas fa-power-off"></i></a></h1> 
+                <div class="topnav-right">
+                 
+                
+                </div>
+
+              </div>
+              <div id="page-content-wrapper">
+              <div class="container-fluid">
+              <div class="">
+              <div class="container" style="padding-top:20px;" style="display: flex;">
+        <!--contenido-->
+        <div class="card">
+            <h3 class="card-title bg-danger" style="padding:10px;">¿Seguro que desea eliminar esta asistencia?</h3>
+            <form action="asistencia.html" style="margin:10px;">
+                <div class="form-group">
+                    <h4><b>Apellido/s:</b> Roberto</h4>
+                    <h4><b>Nombre/s:</b> Melchor</h4>
+                    <h4><b>Fecha y hora:</b> 07/06/18 10:30</h4>
+                </div>
+                <button type="submit" class="btn btn-danger mb-2">Eliminar Asistencia</button>
+            </form>
+            
+        </div>
+        <!--Contenido fin-->
+
+    </div>
+</div>
+                <a href="#menu-toggle" class="btn btn-secondary" id="menu-toggle">Menú</a>
+                </div>
+            </div>
+            <!-- /#page-content-wrapper -->
+            
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Menu Toggle Script -->
+    <script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+    </script>
+
+</body>
+
+</html>

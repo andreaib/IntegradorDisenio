@@ -1,7 +1,7 @@
 body{
   margin: 0;
   padding: 0;
-  background: url(img/fondoLogin2.jpg);
+  background: url(img/fondoLogin7.jpg);
   background-repeat: no-repeat;
    background-size: 100% 100% ;
   background-position: center;
@@ -13,8 +13,8 @@ body{
   width: 300px;
   height: 400px;
   background: #fff;
-  /**opacity:0.8;
-  filter:alpha(opacity=60);*//
+  opacity:10;
+  filter:alpha(opacity=10);
   color: #000;
   top: 50%;
   left: 50%;
@@ -80,7 +80,7 @@ h1{
 .loginbox input[type="submit"]:hover{
   cursor: pointer;
   background: #ffc107;
-  color: #000;
+  color: #fff;
 }
 
 .loginbox a {
@@ -93,7 +93,7 @@ h1{
 
 
 .loginbox a:hover {
-  color: #ffc107;
+  color: #fff;
 }
 
 .boton
@@ -109,8 +109,9 @@ h1{
 }
 
 
-.boton
+.boton{
+ 
   cursor: pointer;
-  background: #ffc107;
-  color: #000;
+  background: #7f0047; ;
+  color: #fff;
 }

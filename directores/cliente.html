@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Asistencias</title>
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="css/simple-sidebar.css" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+
+</head>
+
+<body>
+
+    <div id="wrapper">   
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+
+            <ul class="sidebar-nav">
+
+                <div style="padding-top: 20px; padding-left: 20px;" >
+                <img src="img/dire.png" alt="Avatar" class="image" style="border-radius: 176px 176px 176px 176px;">
+                <p style="padding-left: 35px; font-style: italic; font-weight: bold; color:#fff;" 
+                >
+                Nombre usuario</p>
+                </div>
+                
+                <li class="sidebar-brand">
+                    
+                    <li><a href="inicio.html">Inicio</a></li>
+                    <li><a href="clientes.html">Clientes</a></li>
+		     <li><a href="empleados.html">Empleados</a></li>
+                    <li><a href="asistencias.html">Asistencias</a></li>
+		    <li><a href="asistencias.html">Ent/sal Empleados</a></li>
+ 		    <li><a href="eventos.html">Eventos</a></li>
+                    <li><a href="">Clases</a></li>
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+              <div class="page-header">
+              
+                <h1>Sistema EnerGym 
+                    <a href="../index.html" style="margin-left: 1080px;">
+                        <i class="fas fa-power-off"></i></a></h1> 
+                <div class="topnav-right">
+                 
+                
+                </div>
+
+              </div>
+              <div id="page-content-wrapper">
+              <div class="container-fluid">
+              <div class="">
+              <div class="container" style="padding-top:20px;" style="display: flex;">
+        <!--contenido-->
+            <!--formulario-->
+        <div class="card">
+            <h3 class="card-title" style="padding:10px;">Datos de Cliente</h3>
+            <form action="editarCliente.html" style="margin:10px;">
+                <button type="submit" class="btn btn-dark mb-2">Editar</button>
+                <a href="cuotasCliente.html"><button type="button" class="btn btn-success mb-2">Cuotas</button></a>
+                <a href="eliminarCliente.html"><button type="button" class="btn btn-danger mb-2">Eliminar</button></a>
+                <button type="button" class="btn btn-primary mb-2">Clases</button>
+                <a href="asistenciasCliente.html"><button type="button" class="btn btn-warning mb-2">Asistencias</button></a>
+                <button type="button" class="btn btn-info mb-2">Rutinas</button>
+                <div class="form-group">
+                    <h4><b>Apellido/s:</b> Perez</h4>
+                    <h4><b>Nombre/s:</b> Juan Gabriel</h4>
+                    <h4><b>DNI:</b> 36565230</h4>
+                    <h4><b>Contacto Telefonico:</b> 3624437385</h4>
+                    <h4><b>Email:</b> Ganishkagus@gmail.com</h4>
+                    <h4><b>Cuil:</b>  20-36565230-5</h4>
+                    <h4><b>Sexo:</b> Masculino</h4>
+                </div>
+                <h3>Otros Datos:</h3>
+                <div class="form-group">
+                    <h4><b>Edad:</b> 30</h4>
+                    <h4><b>Peso(kg):</b> 84</h4>
+                    <h4><b>Estatura(cm):</b> 180</h4>
+                    <h4><b>Tiene permiso medico:</b> Si</h4>
+                </div>
+            </form>
+        </div>
+        <!--Contenido fin-->
+
+    </div>
+</div>
+                <a href="#menu-toggle" class="btn btn-secondary" id="menu-toggle">Menú</a>
+                </div>
+            </div>
+            <!-- /#page-content-wrapper -->
+            
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Menu Toggle Script -->
+    <script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+    </script>
+
+</body>
+
+</html>

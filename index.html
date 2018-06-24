@@ -8,7 +8,7 @@
 
   <body>
     <div class="loginbox">
-       <img src="img/loginRojo.jpg" class="avatar">
+       <img src="img/login.png" class="avatar">
     <h1> EnerGym </h1>
         <form >
           <p>Usuario</p>
@@ -16,7 +16,8 @@
           <p>Contraseña</p>
           <input type="password" id="password_user" name="" placeholder="Ingrese Contraseña">
 
-          <input type="button" class="boton" id="iniciar_sesion" style="text-align:center;" name="" value="Ingresar">
+          <input class="boton" id="iniciar_sesion" style="text-align:center;" name="" value="Ingresar">
+
           <!--
           <a href="clientes.html"><input class="boton" style="text-align:center;" name="" value="Acceder como secretaria"></a>
           <a href="administracion/eventos.html"><input class="boton" style="text-align:center;" name="" value="Acceder como administración"></a>
@@ -33,7 +34,7 @@
       if(usuario='' && password==''){
         alert('Ingrese usuario y Contraseña');
       } else if(usuario='secretaria' && password=='secretaria'){
-        window.location.href = "inicio.html";
+        window.location.href = "clientes.html";
       }else if (usuario='admin' && password=='admin') {
         window.location.href = "administracion/eventos.html";
       } else if (usuario='direccion' && password=='direccion') {

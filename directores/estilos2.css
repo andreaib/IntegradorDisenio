@@ -61,7 +61,7 @@ font-weight: bold;
   width: 100%;
   opacity: 0;
   transition: .3s ease;
-  background-color: #fff;
+  background-color:#bf0000;
 
 }
 /* When you mouse over the container, fade in the overlay icon*/
