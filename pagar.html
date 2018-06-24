@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Pagar Cuota</title>
@@ -9,81 +8,120 @@
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom styles for this template -->
     <link href="css/simple-sidebar.css" rel="stylesheet">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
-
-</head>
-
-<body>
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <link rel="stylesheet" href="pages/ticketPago/style.css" media="all" />
+  </head>
+  <body>
     <div id="wrapper">   
-        <!-- Sidebar -->
-        <div id="sidebar-wrapper">
-
-            <ul class="sidebar-nav">
-
-                <div style="padding-top: 20px; padding-left: 20px;" >
-                <img src="img/secre.jpg" alt="Avatar" class="image" style="border-radius: 176px 176px 176px 176px;">
-                <p style="padding-left: 35px; font-style: italic; font-weight: bold; color:#fff;" 
-                >
-                Nombre usuario</p>
+      <div id="sidebar-wrapper"> <!-- Sidebar -->
+        <ul class="sidebar-nav">
+          <div style="padding-top: 20px; padding-left: 20px;" >
+            <img src="img/secre.jpg" alt="Avatar" class="image" style="border-radius: 176px 176px 176px 176px;">
+            <p style="padding-left: 35px; font-style: italic; font-weight: bold; color:#fff;">Nombre usuario</p>
+          </div>
+          <li class="sidebar-brand">
+          <li><a href="inicio.html">Inicio</a></li>
+          <li><a href="clientes.html">Clientes</a></li>
+          <li><a href="asistencias.html">Asistencias</a></li>
+          <li><a href="">Clases</a></li>
+        </ul>
+      </div><!-- /#sidebar-wrapper -->
+      <div class="page-header"> <!-- Page Content -->
+        <h1>Sistema EnerGym 
+          <a href="index.html" style="margin-left: 1080px;">
+          <i class="fas fa-power-off"></i></a>
+        </h1> 
+        <div class="topnav-right"></div>
+      </div>
+      <div id="page-content-wrapper">
+        <div class="container-fluid">
+          <div class="">
+            <div class="container" style="padding-top:20px;" style="display: flex;"><!--contenido-->
+              <header class="clearfix">
+                <div id="logo">
+                  <img src="pages/ticketPago/logo.png">
                 </div>
-                
-                <li class="sidebar-brand">
-                    
-                    <li><a href="inicio.html">Inicio</a></li>
-                    <li><a href="clientes.html">Clientes</a></li>
-                    <li><a href="asistencias.html">Asistencias</a></li>
-                    <li><a href="">Clases</a></li>
-            </ul>
+                <h1>ENERGYM</h1>
+                <div id="company" class="clearfix">
+                  <div>Gimnasio ENERGYM</div>
+                  <div>French 414<br /> Resistencia, Chaco (CP-3500)</div>
+                  <div>(3624) 123456789</div>
+                  <div><a href="mailto:company@example.com">energym@example.com</a></div>
+                </div>
+                <div id="project">
+                  <div><span>Cliente</span> Pepe Lopez</div>
+                  <div><span>Direcion</span> Av 9 de Julio 1487</div>
+                  <div><span>Localidad</span>Resistencia</div>
+                  <div><span>Provincia</span> Chaco</div>
+                  <div><span>Fecha</span> 15 de Julio del 2018</div>
+                </div>
+              </header>
+              <main>
+                <table>
+                  <thead>
+                    <tr>
+                      <th class="service">SERVICIO</th>
+                      <th class="desc">DESCRIPCION</th>
+                      <th>CANTIDAD</th>
+                      <th>IMPORTE</th>
+                      <th></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="service">PILATES</td>
+                      <td class="desc">Clase de Pilates CUOTA MES DE JULIO</td>
+                      <td class="unit">1</td>
+                      <td class="qty">$500.00</td>
+                      <td class="service"></td>
+                    </tr>
+  
+                    <tr>
+                      <td class="service"></td>
+                      <td class="desc"></td>
+                      <td class="desc"></td>
+                      <td class="unit">SUBTOTAL</td>
+                      <td class="total">$500.00</td>
+                    </tr>
+                    <tr>
+                      <td class="service"></td>
+                      <td class="desc"></td>
+                      <td class="unit"></td>
+                      <td class="grand total">Interes 10%</td>
+                      <td class="total">$50.00</td>
+                    </tr>
+                    <tr>
+                      <td class="service"></td>
+                      <td class="desc"></td>
+                      <td class="unit"></td>
+                      <td class="grand total">TOTAL</td>
+                      <td class="grand total">$550.00</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <div id="notices">
+                  <div>Aclaracion:</div>
+                  <div class="notice">Comprobante no valido como factura.</div>
+                </div>
+                <button onclick="window.print();">Imprimir</button>
+              </main>
+            </div> <!--Contenido fin-->
+          </div>
+          <a href="#menu-toggle" class="btn btn-secondary" id="menu-toggle">Menu</a>
         </div>
-        <!-- /#sidebar-wrapper -->
-
-        <!-- Page Content -->
-              <div class="page-header">
-              
-                <h1>Sistema EnerGym 
-                    <a href="index.html" style="margin-left: 1080px;">
-                        <i class="fas fa-power-off"></i></a></h1> 
-                <div class="topnav-right">
-                 
-                
-                </div>
-
-              </div>
-              <div id="page-content-wrapper">
-              <div class="container-fluid">
-              <div class="">
-              <div class="container" style="padding-top:20px;" style="display: flex;">
-        <!--contenido-->
-            <!--formulario-->
-        <div class="card">
-            kdhgkjshdgoj
-        </div>
-        <!--Contenido fin-->
-
-    </div>
-</div>
-                <a href="#menu-toggle" class="btn btn-secondary" id="menu-toggle">Menu</a>
-                </div>
-            </div>
-            <!-- /#page-content-wrapper -->
-            
-    </div>
-    <!-- /#wrapper -->
+      </div><!-- /#page-content-wrapper -->
+    </div><!-- /#wrapper -->
 
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
     <!-- Menu Toggle Script -->
     <script>
-    $("#menu-toggle").click(function(e) {
-        e.preventDefault();
-        $("#wrapper").toggleClass("toggled");
-    });
+      $("#menu-toggle").click(function(e) {
+          e.preventDefault();
+          $("#wrapper").toggleClass("toggled");
+      });
     </script>
-
-</body>
-
+  </body>
 </html>
