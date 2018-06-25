@@ -13,41 +13,34 @@
 
     <title>Eventos</title>
   </head>
-
-<body>
-  <div id="wrapper" class="toggled">   
-    <div id="sidebar-wrapper"> <!-- Sidebar -->
-      <ul class="sidebar-nav" >
-        <div style="padding-top: 20px; padding-left: 20px;" >
-          <img src="img/admin.jpg" alt="Avatar" class="image" style="border-radius: 176px 176px 176px 176px;">
-          <p style="padding-left: 35px; font-style: italic; font-weight: bold; color:#fff;">Nombre usuario</p>
-        </div>
-        <li><a href="inicio.html">Inicio</a></li>
-        <li><a href="clientes.html">Clientes</a></li>
-        <li><a href="asistencias.html">Asistencias</a></li>
-
-        <li class="toggled" data-toggle="collapse" data-target="#menuEventos">
-          <a href="#"><i class="fa fa-bell"></i> Eventos</a>
-        </li>  
-        <div class="sub-menu collapse show" id="menuEventos">
-          <li><a href="listaDeEventos.html"><i class="fa fa-reorder"></i> Lista de Eventos</a></li>
-          <li class="active"><a href="#"><i class="fa fa-calendar"></i> Ver Calendario</a></li>
-        </div>
-
-        <li><a href="">Clases</a></li>
-    
-      </ul>
-    </div><!-- /#sidebar-wrapper -->
-    <div class="page-header"><!-- Page Content -->
-      <h1>Sistema EnerGym 
-        <a href="../index.html" style="margin-left: 1080px;"><i class="fas fa-power-off"></i></a>
-      </h1> 
-      <div class="topnav-right"></div>
-    </div>
-    <div id="page-content-wrapper">
-      <div class="container-fluid">
-        <div class="">
-          <div class="container" style="padding-top:20px;" style="display: flex;"><!--contenido-->
+  <body>
+    <div id="wrapper" class="toggled">   
+      <div id="sidebar-wrapper"> <!-- Sidebar -->
+        <ul class="sidebar-nav" >
+          <div style="padding-top: 20px; padding-left: 20px;" >
+            <img src="img/admin.jpg" alt="Avatar" class="image" style="border-radius: 176px 176px 176px 176px;">
+            <p style="padding-left: 35px; font-style: italic; font-weight: bold; color:#fff;">Nombre usuario</p>
+          </div>
+          <li><a href="inicio.html">Inicio</a></li>
+          <li><a href="clientes.html">Clientes</a></li>
+          <li><a href="asistencias.html">Asistencias</a></li>
+          <li class="toggled" data-toggle="collapse" data-target="#menuEventos">
+            <a href="#"><i class="fa fa-bell"></i> Eventos</a>
+          </li>  
+          <div class="sub-menu collapse show" id="menuEventos">
+            <li><a href="listaDeEventos.html"><i class="fa fa-reorder"></i> Lista de Eventos</a></li>
+            <li class="active"><a href="#"><i class="fa fa-calendar"></i> Ver Calendario</a></li>
+          </div>
+          <li><a href="">Clases</a></li>
+        </ul>
+      </div><!-- /#sidebar-wrapper -->
+      <div class="page-header"><!-- Page Content -->
+        <h1>Sistema EnerGym 
+          <a class="pull-right" href="../index.html"><i class="fas fa-power-off"></i></a>
+        </h1> 
+        <div class="topnav-right"></div>
+      </div>
+      <div class="container" style="padding-top:20px;" style="display: flex;"><!--contenido-->
             <div class="card">
               <h3 class="card-title" style="padding:10px;">Eventos</h3>
               <form action="nuevoEvento.html" style="margin:10px;">
@@ -132,25 +125,18 @@
                 </div>
               </form>
             </div>
-          </div><!--Contenido fin-->
-        </div>
-        <!--<a href="#menu-toggle" class="btn btn-secondary" id="menu-toggle">Menu</a>-->
-      </div>
-    </div><!-- /#page-content-wrapper -->
-  </div><!-- /#wrapper -->
-  
-  <!-- Bootstrap core JavaScript -->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-  <!-- Menu Toggle Script -->
-  <script>
-    $("#menu-toggle").click(function(e) {
+      </div><!--Contenido fin-->
+      <!--<a href="#menu-toggle" class="btn btn-secondary" id="menu-toggle">Menu</a>-->
+    </div><!-- /#wrapper -->
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Menu Toggle Script -->
+    <script>
+      $("#menu-toggle").click(function(e) {
         e.preventDefault();
         $("#wrapper").toggleClass("toggled");
-    });
-  </script>
-
-</body>
-
+      });
+    </script>
+  </body>
 </html>

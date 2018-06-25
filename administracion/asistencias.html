@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Asistencias</title>
@@ -11,145 +10,119 @@
     <link href="css/simple-sidebar.css" rel="stylesheet">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
       <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
-
-</head>
-
-<body>
-
-    <div id="wrapper">   
-        <!-- Sidebar -->
-        <div id="sidebar-wrapper">
-
-            <ul class="sidebar-nav">
-
-                <div style="padding-top: 20px; padding-left: 20px;" >
-                <img src="img/admin.jpg" alt="Avatar" class="image" style="border-radius: 176px 176px 176px 176px;">
-                <p style="padding-left: 35px; font-style: italic; font-weight: bold; color:#fff;" 
-                >
-                Nombre usuario</p>
-                </div>
-                
-                <li class="sidebar-brand">
-                    
-                    <li><a href="inicio.html">Inicio</a></li>
-                    <li><a href="clientes.html">Clientes</a></li>
-                    <li><a href="asistencias.html">Asistencias</a></li>
-                    <li><a href="eventos.html">Eventos</a></li>
-                    <li><a href="">Clases</a></li>
-            </ul>
+  </head>
+  <body>
+    <div id="wrapper" class="toggled"><!-- Sidebar -->           
+      <div id="sidebar-wrapper">
+        <ul class="sidebar-nav">
+          <div style="padding-top: 20px; padding-left: 20px;" >
+            <img src="img/admin.jpg" alt="Avatar" class="image" style="border-radius: 176px 176px 176px 176px;">
+            <p style="padding-left: 35px; font-style: italic; font-weight: bold; color:#fff;"> Nombre usuario</p>
+          </div>
+          <li class="sidebar-brand">
+            <li><a href="inicio.html">Inicio</a></li>
+            <li><a href="clientes.html">Clientes</a></li>
+            <li><a href="asistencias.html">Asistencias</a></li>
+            <li><a href="eventos.html">Eventos</a></li>
+            <li><a href="">Clases</a></li>
+          </li>
+        </ul>
+      </div>
+      <!-- /#sidebar-wrapper -->
+      <!-- Page Content -->
+      <div class="page-header">
+        <h1>Sistema EnerGym 
+          <a class="pull-right" href="../index.html">
+            <i class="fas fa-power-off">                
+            </i>
+          </a>
+        </h1> 
+        <div class="topnav-right">
         </div>
-        <!-- /#sidebar-wrapper -->
-
-        <!-- Page Content -->
-              <div class="page-header">
-              
-                <h1>Sistema EnerGym 
-                    <a href="../index.html" style="margin-left: 1080px;">
-                        <i class="fas fa-power-off"></i></a></h1> 
-                <div class="topnav-right">
-                 
-                
-                </div>
-
-              </div>
-              <div id="page-content-wrapper">
-              <div class="container-fluid">
-              <div class="">
-              <div class="container" style="padding-top:20px;" style="display: flex;">
-        <!--contenido-->
-           <form class="form-inline d-flex justify-content-between">
-            <span>
-                <input type="text" class="form-control mb-2 mr-sm-2" id="inlineFormInputName2" placeholder="...">
-                <button type="submit" class="btn btn-dark mb-2">Buscar</button>
-            </span>
-             <a href="nuevoAsistencia.html"><button type="button" class="btn btn-success mb-2">Nueva Asistencia</button></a>
-           
+      </div>
+      <div class="container" style="padding-top:20px;" style="display: flex;"><!--contenido-->
+        <form class="form-inline d-flex justify-content-between">
+          <span>
+            <input type="text" class="form-control mb-2 mr-sm-2" id="inlineFormInputName2" placeholder="...">
+            <button type="submit" class="btn btn-dark mb-2">Buscar</button>
+          </span>
+              <a href="nuevoAsistencia.html"><button type="button" class="btn btn-success mb-2">Nueva Asistencia</button></a>
         </form>
         <table class="table bg-light">
-            <thead class="thead-dark">
-                <tr>
-                <th scope="col">#</th>
-                <th scope="col">Nombre</th>
-                <th scope="col">Apellido</th>
-                <th scope="col">Fecha y Hora</th>
-                <th scope="col">Acciones</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                <th scope="row">1</th>
-                <td>Roberto</td>
-                <td>Melchor</td>
-                <td>07/06/18 10:30</td>
-                <td>
+        <thead class="thead-dark">
+            <tr>
+            <th scope="col">#</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Apellido</th>
+            <th scope="col">Fecha y Hora</th>
+            <th scope="col">Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+            <th scope="row">1</th>
+            <td>Roberto</td>
+            <td>Melchor</td>
+            <td>07/06/18 10:30</td>
+            <td>
+                <a href="cliente.html"><button type="button" class="btn btn-secondary">Ir a Cliente</button></a>
+                <a href="eliminarAsistencia.html"><button type="button" class="btn btn-danger">Eliminar</button></a>
+            </td>
+            </tr>
+            <tr>
+            <th scope="row">2</th>
+            <td>Juana</td>
+            <td>Dearco</td>
+            <td>07/06/18 11:30</td>
+            <td>
                     <a href="cliente.html"><button type="button" class="btn btn-secondary">Ir a Cliente</button></a>
                     <a href="eliminarAsistencia.html"><button type="button" class="btn btn-danger">Eliminar</button></a>
-                </td>
-                </tr>
-                <tr>
-                <th scope="row">2</th>
-                <td>Juana</td>
-                <td>Dearco</td>
-                <td>07/06/18 11:30</td>
-                <td>
-                        <a href="cliente.html"><button type="button" class="btn btn-secondary">Ir a Cliente</button></a>
-                        <a href="eliminarAsistencia.html"><button type="button" class="btn btn-danger">Eliminar</button></a>
-                </td>
-                </tr>
-                <tr>
-                <th scope="row">3</th>
-                <td>Laura</td>
-                <td>Pajara</td>
-                <td>07/06/18 11:32</td>
-                <td>
-                        <a href="cliente.html"><button type="button" class="btn btn-secondary">Ir a Cliente</button></a>
-                        <a href="eliminarAsistencia.html"><button type="button" class="btn btn-danger">Eliminar</button></a>
-                </td>
-                </tr>
-            </tbody>
+            </td>
+            </tr>
+            <tr>
+            <th scope="row">3</th>
+            <td>Laura</td>
+            <td>Pajara</td>
+            <td>07/06/18 11:32</td>
+            <td>
+                    <a href="cliente.html"><button type="button" class="btn btn-secondary">Ir a Cliente</button></a>
+                    <a href="eliminarAsistencia.html"><button type="button" class="btn btn-danger">Eliminar</button></a>
+            </td>
+            </tr>
+          </tbody>
         </table>
-        
-           <ul class="pagination">
-    <li class="page-item">
-      <a class="page-link" href="#" aria-label="Previous">
-        <span aria-hidden="true">&laquo;</span>
-        <span class="sr-only">Previous</span>
-      </a>
-    </li>
-    <li class="page-item"><a class="page-link" href="#">1</a></li>
-    <li class="page-item"><a class="page-link" href="#">2</a></li>
-    <li class="page-item"><a class="page-link" href="#">3</a></li>
-    <li class="page-item">
-      <a class="page-link" href="#" aria-label="Next">
-        <span aria-hidden="true">&raquo;</span>
-        <span class="sr-only">Next</span>
-      </a>
-    </li>
-  </ul>
+        <ul class="pagination">
+          <li class="page-item">
+            <a class="page-link" href="#" aria-label="Previous">
+              <span aria-hidden="true">&laquo;</span>
+              <span class="sr-only">Previous</span>
+            </a>
+          </li>
+          <li class="page-item"><a class="page-link" href="#">1</a></li>
+          <li class="page-item"><a class="page-link" href="#">2</a></li>
+          <li class="page-item"><a class="page-link" href="#">3</a></li>
+          <li class="page-item">
+            <a class="page-link" href="#" aria-label="Next">
+              <span aria-hidden="true">&raquo;</span>
+              <span class="sr-only">Next</span>
+            </a>
+          </li>
+        </ul>
         <!--Contenido fin-->
-
-    </div>
-</div>
-                <a href="#menu-toggle" class="btn btn-secondary" id="menu-toggle">Menu</a>
-                </div>
-            </div>
-            <!-- /#page-content-wrapper -->
-            
+        <!-- <a href="#menu-toggle" class="btn btn-secondary" id="menu-toggle">Menu</a>-->
+      </div>
+        <!-- /#page-content-wrapper -->
     </div>
     <!-- /#wrapper -->
-
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
     <!-- Menu Toggle Script -->
     <script>
     $("#menu-toggle").click(function(e) {
-        e.preventDefault();
-        $("#wrapper").toggleClass("toggled");
+    e.preventDefault();
+    $("#wrapper").toggleClass("toggled");
     });
     </script>
-
-</body>
-
+  </body>
 </html>
