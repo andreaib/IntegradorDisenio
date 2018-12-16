@@ -21,11 +21,11 @@ class formClientes(forms.ModelForm):
 
 	fecha_ingreso = forms.DateField( label='Fecha de Ingreso',
 									required =True,
-									widget=forms.SelectDateWidget(attrs={'class':'form-control',}) )
+									widget=forms.DateInput(attrs={'class':'form-control',}) )
 	
 	fecha_nacimiento = forms.DateField( label='Fecha de Nacimiento',
 									required =True,
-									widget=forms.SelectDateWidget(attrs={'class':'form-control',}) )
+									widget=forms.DateInput(attrs={'class':'form-control',}) )
 	
 	cuil = forms.CharField( label="CUIL",
 							  	  required=True, 
