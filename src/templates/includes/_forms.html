@@ -1,0 +1,14 @@
+
+{% for field in form  %}
+  <div class="form-group">
+  	<label class="control-label col-md-3 col-sm-3 col-xs-12">{{field.label_tag}}</label>
+      <div class="col-md-6 col-sm-6 col-xs-12">
+      	{{field}}
+      	<!--
+      	<button type="button" class="btn btn-round btn-info"><i class="glyphicon glyphicon-question-sign"></i></button>{{field.help_text}}
+      	-->
+  		</br>
+  		{{field.errors}}
+      </div>
+  </div>
+{% endfor %}

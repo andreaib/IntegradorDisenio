@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+	
+{% block content %}
+	{% include "includes/_forms_errors.html" %}
+	<form id="form-nuevo-nodo" data-parsley-validate class="form-horizontal form-label-left" method="POST" role="form">{% csrf_token %}
+		{% include "includes/_forms.html" %}
+
+		<div class="form-group">
+	    <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
+	      <a href="{% url 'clientes:listar' %}"><button class="btn btn-primary" type="button">Cancelar</button></a>
+	      <button type="submit" class="btn btn-success">Cargar</button>
+	    </div>
+	  </div>
+	</form>
+	
+{% endblock content %}

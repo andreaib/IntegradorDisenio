@@ -1,0 +1,44 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html lang="" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Login</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'main/estilos.css' %}">
+  </head>
+
+  <body style="background: url('../static/img/fondoLogin7.jpg')">
+    <div class="loginbox">
+       <img src="{% static 'img/login.png' %}" class="avatar">
+    <h1 style="font-size: 32px; font-style: italic;"> EnerGym </h1>
+        <form >
+          <p>Usuario</p>
+          <input type="text" id="nombre_usuario" name="" placeholder="Ingrese Usuario">
+          <p>Contraseña</p>
+          <input type="password" id="password_user" name="" placeholder="Ingrese Contraseña">
+
+          <input class="boton" id="iniciar_sesion" style="text-align:center;" name="" value="Ingresar">
+
+        </form>
+    </div>
+  </body>
+  <script type="text/javascript">
+    document.getElementById("iniciar_sesion").onclick = function() {
+      usuario = document.getElementById("nombre_usuario").value;
+      password = document.getElementById("password_user").value;
+
+      if(usuario='' && password==''){
+        alert('Ingrese usuario y Contraseña');
+      } else if(usuario='secretaria' && password=='secretaria'){
+        window.location.href = "{% url 'clientes:listar' %}"
+      }else if (usuario='admin' && password=='admin') {
+        window.location.href = "administracion/eventos.html";
+      } else if (usuario='direccion' && password=='direccion') {
+        window.location.href = "directores/empleados.html";
+      } else {
+        alert('Usuario o Contraseña invalidos.')
+      }
+    }
+  </script>
+</html>
