@@ -1,0 +1,98 @@
+<!-- Modal Nuevo Cliente-->
+<div id="ModalNuevoCliente" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="ModalNuevoCliente">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+      <h4 class="modal-title"><i class="glyphicon glyphicon-plus"></i>Nuevo Cliente</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <h3>Datos Personales</h3>
+        <div class="form-group">
+          <div class="row"> 
+            <div class= "col-md-6">
+              <label for="formGroupExampleInput">Apellido/s</label>
+              <input type="text" class="form-control" id="apellidoNuevoCliente" placeholder="">
+            </div>
+            <div class= "col-md-6">
+              <label for="formGroupExampleInput">Nombre/s</label>
+              <input type="text" class="form-control" id="nombreNuevoCliente" placeholder="">
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="row"> 
+            <div class= "col-md-4">
+              <label for="formGroupExampleInput">DNI</label>
+              <input type="number" value="" class="form-control" id="dniNuevoCliente" placeholder="" style="width:200px">
+            </div>
+            <div class= "col-md-4">
+              <label for="formGroupExampleInput">Fecha de Nacimiento</label>
+              <input type="date" value="" class="form-control" id="feNacimientoNuevoCliente" placeholder="" style="width:200px">
+            </div>
+            <div class= "col-md-4">
+              <label for="sexoNuevoCliente">Sexo</label>
+              <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                  <option selected>Masculino</option>
+                  <option value="1">Femenino</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="row">
+            <div class= "col-md-6">
+              <label for="formGroupExampleInput">Domicilio</label>
+              <input type="text" class="form-control" id="domicilioNuevoCliente" placeholder="">
+            </div>
+            <div class= "col-md-6">
+              <label for="formGroupExampleInput">Fecha de Ingreso</label>
+              <input type="date" value="" class="form-control" id="feIngresoNuevoCliente" placeholder="" style="width:200px">
+            </div> 
+          </div>
+        </div>
+
+        <h3>Datos de Contacto</h3>
+        <div class="form-group">
+          <div class="row">
+            <div class= "col-md-6">
+              <label for="formGroupExampleInput">Contacto Telefonico</label>
+              <input type="number" value="" class="form-control" id="telefonoNuevoCliente" placeholder="" style="width:200px">
+            </div>
+            <div class= "col-md-6">
+              <label for="exampleFormControlInput1">Email</label>
+              <input type="email" class="form-control" value="" id="emailNuevoCliente" placeholder="name@example.com">
+            </div>
+          </div>
+        </div>
+          
+        <h3>Datos Medicos</h3>
+        <div class="form-group">
+          <div class="row">
+            <div class= "col-md-4">
+              <label for="formGroupExampleInput">Peso(kg)</label>
+              <input type="number" value="" class="form-control" id="pesoNuevoCliente" placeholder="" style="width:80px">
+            </div>
+            <div class= "col-md-4">
+              <label for="formGroupExampleInput">Estatura(cm)</label>
+              <input type="number" value="" class="form-control" id="estaturaNuevoCliente" placeholder="" style="width:80px">
+            </div>
+            <div class= "col-md-4">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="permisoMedicoNuevoCliente">
+                <label class="form-check-label" for="defaultCheck1">
+                  Tiene permiso medico
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn" id="btn-confirmar-cliente">Confirmar</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+
+  </div>
+</div>

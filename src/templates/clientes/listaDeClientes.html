@@ -7,7 +7,7 @@
       <input type="text" class="form-control mb-2 mr-sm-2" id="InputBuscar" placeholder="Buscar">
 			<button type="submit" class="btn btn-dark mb-2">Buscar</button>
     </span>
-    <a href="{% url 'clientes:crear' %}"><button id="btn-nuevo-cliente" type="button" class="btn btn-success mb-2">Nuevo</button></a>
+    <button id="btn-nuevo-cliente" type="button" class="btn btn-success mb-2">Nuevo</button>
   </form>
         
   <table id="table_clientes" class="table bg-light">
@@ -22,15 +22,15 @@
     </thead>
     <tbody>
     	{% for c  in clientes  %}
-    		<tr>
+    		<tr id="fila_{{c.pk}}">
     			<th scope="row">{{c.pk}}</th>
-          <td>{{c.pk}}</td> 
+          <td>{{c.last_name}}</td> 
           <td>{{c.first_name}}</td>
           <td>{{c.cuil}}</td>
           <td>
           	<a href="cliente.html"><button type="button" class="btn btn-secondary">Ver</button></a>
           	<a href="cuotasCliente.html"><button type="button" class="btn btn-success">Cuotas</button></a>
-          	<a href="eliminarCliente.html"><button type="button" class="btn btn-danger">Eliminar</button></a>
+          	<button type="button" id="1" class="btn btn-danger bt-eliminar-cliente">Eliminar</button>
            	<button type="button" class="btn btn-primary">Clases</button>
           	<a href="asistenciasCliente.html"><button type="button" class="btn btn-warning">Asistencias</button></a>
           	<button type="button" class="btn btn-info">Rutinas</button>
@@ -58,4 +58,121 @@
       </a>
     </li>
   </ul>
+
+  {% include "clientes/modal_nuevo_cliente.html" %}
 {% endblock content %}
+
+{% block js_extra %}
+  <script type="text/javascript">
+    $( "#btn-nuevo-cliente" ).click(function() {
+      $('#ModalNuevoCliente').modal('toggle');
+      document.getElementById('apellidoNuevoCliente').value = '';
+      document.getElementById('nombreNuevoCliente').value = '';
+      document.getElementById('dniNuevoCliente').value = '';
+      
+    });
+
+    $( "#btn-confirmar-cliente" ).click(function() {
+        var nombre = $('#nombreNuevoCliente').val();
+        var apellido = $('#apellidoNuevoCliente').val();
+        var dni = $('#dniNuevoCliente').val();
+        var fe_nacimiento = $('#feNacimientoNuevoCliente').val();
+        var sexo = $('#sexoNuevoCliente').val();
+        var domicilio = $('#domicilioNuevoCliente').val();
+        var fe_ingreso = $('#feIngresoNuevoCliente').val();
+        var tel = $('#telefonoNuevoCliente').val();
+        var email = $('#emailNuevoCliente').val();
+        var peso = $('#pesoNuevoCliente').val();
+        var estatura = $('#estaturaNuevoCliente').val();
+        var permiso = $('#permisoMedicoNuevoCliente').val();
+
+        if (nombre=='' | apellido=='' | dni==''){
+          swal("Nuevo Cliente","Faltan datos", "error");
+        return  
+        }  
+        if ( dni=='38377186'){
+            swal("", "el cliente ya existe", "error");
+        return
+        }
+        
+        var continuar = false;
+        swal({
+          title: "Nuevo Cliente",
+          text: "Esta a punto de agregar nuevo cliente. Los datos son correctos?",
+          type: "info",
+          showCancelButton: true,
+          closeOnConfirm: false,
+          showLoaderOnConfirm: true
+        }, function () {
+          setTimeout(function () {
+            var id_cliente = get_max_legajo();
+
+            $.ajax({
+                data:{'id':id_cliente,
+                      'nombre': nombre,
+                      'apellido': apellido,
+                      'dni': dni,
+                      'fe_nacimiento': fe_nacimiento,
+                      'sexo': sexo,
+                      'domicilio': domicilio,
+                      'fe_ingreso': fe_ingreso,
+                      'tel': tel,
+                      'email': email,
+                      'peso': peso,
+                      'estatura': estatura,
+                      'permiso': permiso,
+                      },
+                url : "{% url 'clientes:new' %}",
+                type: 'get',
+                cache: false,
+                success: function(data){
+                  if(data == 'ok'){
+                     swal({ 
+                      title: "Nuevo Cliente",
+                       text: "El cliente se ha creado con exito!",
+                        type: "success" 
+                      },
+                      function(){
+                        location.reload();
+                    }); 
+
+                  }else{
+                    swal("Ooooop","ocurrio un error intente nuevamente","danger");
+                  }
+                }
+            });
+          }, 2000);
+        });       
+      });
+
+      $(document).on('click', ".bt-eliminar-cliente", function() {
+        var id_cliente = $(this).attr('id'); 
+
+        swal({
+          title: "Eliminar Cliente",
+          text: "Esta a punto de eliminar un cliente, Desea Continuar?",
+          type: "warning",
+          showCancelButton: true,
+          confirmButtonClass: "btn-danger",
+          confirmButtonText: "Si, eliminar",
+          closeOnConfirm: false
+        },
+        function(){
+          $('table#table_clientes tr#fila_'+id_cliente).remove();
+          swal("Eliminado!", "Cliente Eliminado con exito!.", "success");
+        });
+      });   
+
+      function get_max_legajo(){
+        var maximum = 0;
+
+        $('.id_cliente').each(function() {
+          var value = parseInt($(this).attr('id'));
+          maximum = (value > maximum) ? value : maximum;
+        });
+
+        return maximum +1
+      }  
+
+  </script>
+{% endblock js_extra %}

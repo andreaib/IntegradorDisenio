@@ -12,6 +12,7 @@
     
     <!-- Custom styles for this template -->
     <link href="{% static 'main/css/simple-sidebar.css' %}" rel="stylesheet">
+    <link href="{% static 'main/css/sweetalert.css' %}" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
 </head>
@@ -52,6 +53,7 @@
 
   <!-- Bootstrap core JavaScript -->
   <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+  <script src="{% static 'main/js/sweetalert.js' %}"></script>
   <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
 
   <!-- Menu Toggle Script -->
@@ -61,6 +63,10 @@
         $("#wrapper").toggleClass("toggled");
     });
   </script>
+
+  {% block js_extra %}
+  {% endblock js_extra %}
+    
 </body>
 
 </html>
